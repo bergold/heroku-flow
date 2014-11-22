@@ -1,0 +1,24 @@
+<link rel="import" href="../flow-apps/flow-apps.html">
+<link rel="import" href="../flow-app-details/flow-app-details.html">
+<link rel="import" href="../../components/core-animated-pages/core-animated-pages.html">
+
+<polymer-element name="flow-app">
+  <template>
+    <link rel="stylesheet" type="text/css" href="flow-app.css">
+
+    <core-animated-pages id="pagehost" selected="splash" fit>
+
+      <section name="splash">
+        <h1>Splash</h1>
+      </section>
+
+      <flow-apps name="apps"></flow-apps>
+
+      <flow-app-details name="app"></flow-app-details>
+
+    </core-animated-pages>
+
+  </template>
+
+  <script src="flow-app.js"></script>
+</polymer-element>

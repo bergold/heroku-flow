@@ -1,0 +1,19 @@
+[drawer] {
+  background: #fff;
+}
+
+core-toolbar.ratio-16-9 {
+  height: 144px;
+}
+
+core-menu {
+  margin: 8px 0;
+}
+
+paper-item.indent {
+  padding-left: 56px;
+}
+
+paper-item core-icon {
+  margin-right: 32px;
+}

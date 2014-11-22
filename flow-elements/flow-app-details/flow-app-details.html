@@ -1,0 +1,72 @@
+<link rel="import" href="../../components/core-drawer-panel/core-drawer-panel.html">
+<link rel="import" href="../../components/core-header-panel/core-header-panel.html">
+<link rel="import" href="../../components/core-toolbar/core-toolbar.html">
+<link rel="import" href="../../components/core-menu/core-menu.html">
+<link rel="import" href="../../components/core-icon/core-icon.html">
+<link rel="import" href="../../components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../components/paper-item/paper-item.html">
+
+<link rel="import" href="../flow-app-settings/flow-app-settings.html">
+<link rel="import" href="../flow-app-logs/flow-app-logs.html">
+<link rel="import" href="../flow-app-dynos/flow-app-dynos.html">
+
+<polymer-element name="flow-app-details">
+  <template>
+    <link rel="stylesheet" type="text/css" href="flow-app-details.css"></link>
+
+    <core-drawer-panel id="navdrawer" forceNarrow="true">
+
+      <core-header-panel mode="scroll" drawer>
+        <core-toolbar class="ratio-16-9">
+          <div class="bottom" flex>Appname</div>
+          <paper-icon-button id="toggleNav" class="bottom" icon="arrow-drop-down"></paper-icon-button>
+        </core-toolbar>
+        <core-menu id="navigation" selected="settings" selectedAttribute="">
+          <paper-item name="settings">
+            <core-icon icon="dashboard"></core-icon>
+            Dashboard
+          </paper-item>
+          <paper-item name="logs">
+            <core-icon icon="subject"></core-icon>
+            Logs
+          </paper-item>
+          <paper-item name="dynos">
+            <core-icon icon="dns"></core-icon>
+            Dynos
+          </paper-item>
+        </core-menu>
+        <core-menu id="appsnav" selected="settings" selectedAttribute="" hidden>
+          <paper-item name="apps">
+            <core-icon icon="apps"></core-icon>
+            All Apps
+          </paper-item>
+          <paper-item name="app1" class="indent">
+            Appname 1
+          </paper-item>
+          <paper-item name="app2" class="indent">
+            Appname 2
+          </paper-item>
+        </core-menu>
+      </core-header-panel>
+
+      <core-header-panel main>
+
+        <core-toolbar>
+          <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
+          <div flex>App Dashboard</div>
+        </core-toolbar>
+
+        <core-animated-pages id="pagehost" selected="settings" fit>
+          <flow-app-settings name="settings"></flow-app-settings>
+          <flow-app-logs name="logs"></flow-app-logs>
+          <flow-app-dynos name="dynos"></flow-app-dynos>
+        </core-animated-pages>
+
+      </core-header-panel>
+
+    </core-drawer-panel>
+
+  </template>
+
+  <script src="flow-app-details.js"></script>
+</polymer-element>

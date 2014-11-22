@@ -1,0 +1,33 @@
+:host {
+  background: rgb(16, 16, 16);
+  color: rgb(240, 240, 240);
+}
+
+.screen {
+  overflow-x: hidden;
+  overflow-y: auto;
+  word-wrap: break-word;
+  font-family: monospace;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: text;
+}
+
+.lines {
+  white-space: pre;
+}
+
+.cursor {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  background-clip: content-box;
+}
+.cursor.active {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.off-screen {
+  position: absolute;
+  top: -999px;
+}

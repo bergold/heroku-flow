@@ -1,0 +1,21 @@
+<link rel="import" href="../../components/core-a11y-keys/core-a11y-keys.html">
+
+<polymer-element name="flow-console">
+  <template>
+    <link rel="stylesheet" type="text/css" href="flow-console.css">
+
+    <div id="screen" class="screen" fit>
+      <div id="lines" class="lines"></div>
+      <div id="cursor" class="cursor"></div>
+    </div>
+    <textarea id="stdin" class="off-screen" tabindex="-1"></textarea>
+
+    <core-a11y-keys keys="enter" id="keysEnter"></core-a11y-keys>
+    <!--<core-a11y-keys keys="left right home end" id="keysSelect"></core-a11y-keys>-->
+    <core-a11y-keys keys="pagedown down" id="keysHistoryDown"></core-a11y-keys>
+    <core-a11y-keys keys="pageup up" id="keysHistoryUp"></core-a11y-keys>
+
+  </template>
+
+  <script src="flow-console.js"></script>
+</polymer-element>
