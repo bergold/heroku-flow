@@ -9,8 +9,20 @@ define(function(require, exports, module) {
 
     app.goto('app');
     app.apps = [
-      'app1',
-      'app2'
+      {
+        "buildpack_provided_description": "Ruby/Rack",
+        "name": "example",
+        "released_at": "2012-01-01T12:00:00Z",
+        "updated_at": "2012-01-01T12:00:00Z",
+        "web_url": "https://example.herokuapp.com/"
+      },
+      {
+        "buildpack_provided_description": "NodeJS",
+        "name": "example-2",
+        "released_at": "2012-01-01T12:00:00Z",
+        "updated_at": "2012-01-01T12:00:00Z",
+        "web_url": "https://example.herokuapp.com/"
+      }
     ];
 
   };
