@@ -7,7 +7,7 @@ define(function(require, exports, module) {
 
   exports.init = function() {
 
-    app.goto('app');
+    app.goto('apps');
     app.apps = [
       {
         "buildpack_provided_description": "Ruby/Rack",
