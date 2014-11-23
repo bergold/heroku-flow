@@ -2,7 +2,7 @@
 <link rel="import" href="../../components/core-toolbar/core-toolbar.html">
 <link rel="import" href="../../components/paper-shadow/paper-shadow.html">
 
-<polymer-element name="flow-apps">
+<polymer-element name="flow-apps" attributes="apps">
   <template>
     <link rel="stylesheet" type="text/css" href="flow-apps.css">
 
@@ -12,13 +12,7 @@
         <div>Apps</div>
       </core-toolbar>
 
-      <paper-shadow class="card" z="1">
-        <h1>App 1</h1>
-        <p>lalallala</p>
-        <h1>App 2</h1>
-        <p>lalallala</p>
-        <h1>App 3</h1>
-        <p>lalallala</p>
+      <paper-shadow id="applist" class="card" z="1">
       </paper-shadow>
 
     </core-header-panel>

@@ -15,6 +15,5 @@ var componentsReady = new Promise(function(resolve, reject) {
 });
 
 Promise.all([scriptsReady, componentsReady]).then(function(result) {
-  var main = result[0];
-  main.init();
+  result[0].init();
 });

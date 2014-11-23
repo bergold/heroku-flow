@@ -1,10 +1,15 @@
 Polymer('flow-app', {
 
-  'selected': 'splash',
-
-
   domReady: function() {
-    window.myapp = this;
+
+  },
+
+  goto: function(page) {
+    this.$.pagehost.selected = page;
+  },
+
+  appsChanged: function(oldVal, newVal) {
+    this.$.apps.apps = newVal;
   }
 
 });
