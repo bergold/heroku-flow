@@ -11,7 +11,7 @@
 <link rel="import" href="../flow-app-logs/flow-app-logs.html">
 <link rel="import" href="../flow-app-dynos/flow-app-dynos.html">
 
-<polymer-element name="flow-app-details" attributes="apps">
+<polymer-element name="flow-app-details" attributes="apps app">
   <template>
     <link rel="stylesheet" type="text/css" href="flow-app-details.css"></link>
 
@@ -19,18 +19,18 @@
 
       <core-header-panel mode="scroll" drawer>
         <core-toolbar class="ratio-16-9">
-          <div class="bottom" flex>Appname</div>
+          <div class="bottom" flex>{{app}}</div>
           <paper-icon-button id="toggleNav" class="bottom" icon="arrow-drop-down"></paper-icon-button>
         </core-toolbar>
         <core-collapse id="appsnav">
-          <core-menu selected="settings" selectedAttribute="">
+          <core-menu selectedAttribute="">
             <paper-item name="apps">
               <core-icon icon="apps"></core-icon>
               All Apps
             </paper-item>
-            <template repeat="{{ app in apps }}">
-              <paper-item name="{{ app.name }}" class="indent">
-                {{ app.name }}
+            <template repeat="{{ a in apps }}">
+              <paper-item name="{{ a.name }}" class="indent">
+                {{ a.name }}
               </paper-item>
             </template>
           </core-menu>
