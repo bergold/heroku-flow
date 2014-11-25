@@ -15,58 +15,60 @@
   <template>
     <link rel="stylesheet" type="text/css" href="flow-app-details.css"></link>
 
-    <core-drawer-panel id="navdrawer" forceNarrow="true">
+    <div class="fullbleedcard" hero-id="pageexpand" hero>
+      <core-drawer-panel id="navdrawer" forceNarrow="true">
 
-      <core-header-panel mode="scroll" drawer>
-        <core-toolbar class="ratio-16-9">
-          <div class="bottom" flex>{{app}}</div>
-          <paper-icon-button id="toggleNav" class="bottom" icon="arrow-drop-down"></paper-icon-button>
-        </core-toolbar>
-        <core-collapse id="appsnav">
-          <core-menu selectedAttribute="">
-            <paper-item name="apps">
-              <core-icon icon="apps"></core-icon>
-              All Apps
-            </paper-item>
-            <template repeat="{{ a in apps }}">
-              <paper-item name="{{ a.name }}" class="indent">
-                {{ a.name }}
+        <core-header-panel mode="scroll" drawer>
+          <core-toolbar class="ratio-16-9">
+            <div class="bottom" flex>{{app}}</div>
+            <paper-icon-button id="toggleNav" class="bottom" icon="arrow-drop-down"></paper-icon-button>
+          </core-toolbar>
+          <core-collapse id="appsnav">
+            <core-menu selectedAttribute="">
+              <paper-item name="apps">
+                <core-icon icon="apps"></core-icon>
+                All Apps
               </paper-item>
-            </template>
+              <template repeat="{{ a in apps }}">
+                <paper-item name="{{ a.name }}" class="indent">
+                  {{ a.name }}
+                </paper-item>
+              </template>
+            </core-menu>
+          </core-collapse>
+          <core-menu id="navigation" selected="settings" selectedAttribute="">
+            <paper-item name="settings">
+              <core-icon icon="dashboard"></core-icon>
+              Dashboard
+            </paper-item>
+            <paper-item name="logs">
+              <core-icon icon="subject"></core-icon>
+              Logs
+            </paper-item>
+            <paper-item name="dynos">
+              <core-icon icon="dns"></core-icon>
+              Dynos
+            </paper-item>
           </core-menu>
-        </core-collapse>
-        <core-menu id="navigation" selected="settings" selectedAttribute="">
-          <paper-item name="settings">
-            <core-icon icon="dashboard"></core-icon>
-            Dashboard
-          </paper-item>
-          <paper-item name="logs">
-            <core-icon icon="subject"></core-icon>
-            Logs
-          </paper-item>
-          <paper-item name="dynos">
-            <core-icon icon="dns"></core-icon>
-            Dynos
-          </paper-item>
-        </core-menu>
-      </core-header-panel>
+        </core-header-panel>
 
-      <core-header-panel main>
+        <core-header-panel main>
 
-        <core-toolbar>
-          <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
-          <div flex>App Dashboard</div>
-        </core-toolbar>
+          <core-toolbar>
+            <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
+            <div flex>App Dashboard</div>
+          </core-toolbar>
 
-        <core-animated-pages id="pagehost" selected="settings" fit>
-          <flow-app-settings name="settings"></flow-app-settings>
-          <flow-app-logs name="logs"></flow-app-logs>
-          <flow-app-dynos name="dynos"></flow-app-dynos>
-        </core-animated-pages>
+          <core-animated-pages id="pagehost" selected="settings" fit>
+            <flow-app-settings name="settings"></flow-app-settings>
+            <flow-app-logs name="logs"></flow-app-logs>
+            <flow-app-dynos name="dynos"></flow-app-dynos>
+          </core-animated-pages>
 
-      </core-header-panel>
+        </core-header-panel>
 
-    </core-drawer-panel>
+      </core-drawer-panel>
+    </div>
 
   </template>
 

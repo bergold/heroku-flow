@@ -1,17 +1,20 @@
 <link rel="import" href="../flow-apps/flow-apps.html">
 <link rel="import" href="../flow-app-details/flow-app-details.html">
 <link rel="import" href="../../components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../../components/core-animated-pages/transitions/slide-up.html">
 <link rel="import" href="../../components/paper-spinner/paper-spinner.html">
 
 <polymer-element name="flow-app" attributes="apps">
   <template>
     <link rel="stylesheet" type="text/css" href="flow-app.css">
 
-    <core-animated-pages id="pagehost" selected="splash" fit>
+    <core-animated-pages id="pagehost" selected="splash" fit transitions="cross-fade-all hero-transition">
 
-      <section name="splash" vertical layout center>
-        <div flex two>Splash</div>
-        <paper-spinner active flex></paper-spinner>
+      <section name="splash">
+        <div vertical layout center fit>
+          <div flex two>Splash</div>
+          <paper-spinner active flex></paper-spinner>
+        </div>
       </section>
 
       <flow-apps id="apps" name="apps" apps="{{apps}}"></flow-apps>
