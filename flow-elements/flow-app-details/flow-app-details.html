@@ -6,6 +6,7 @@
 <link rel="import" href="../../components/core-icon/core-icon.html">
 <link rel="import" href="../../components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../../components/paper-item/paper-item.html">
+<link rel="import" href="../../components/paper-shadow/paper-shadow.html">
 
 <link rel="import" href="../flow-app-settings/flow-app-settings.html">
 <link rel="import" href="../flow-app-logs/flow-app-logs.html">
@@ -15,7 +16,7 @@
   <template>
     <link rel="stylesheet" type="text/css" href="flow-app-details.css"></link>
 
-    <div class="fullbleedcard" hero-id="pageexpand" hero fit>
+    <paper-shadow class="fullbleedcard" z="2" hero-id="pageexpand" hero fit>
       <core-drawer-panel id="navdrawer" forceNarrow="true">
 
         <core-header-panel mode="scroll" drawer>
@@ -68,7 +69,7 @@
         </core-header-panel>
 
       </core-drawer-panel>
-    </div>
+    </paper-shadow>
 
   </template>
 
