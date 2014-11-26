@@ -12,11 +12,11 @@
         <div>Apps</div>
       </core-toolbar>
 
-      <paper-shadow id="applist" class="card" z="1" hero-id="pageexpand" hero>
+      <paper-shadow class="card" z="1">
         <template repeat="{{ app in apps }}">
-          <div>
+          <paper-shadow class="card" data-app="{{app.name}}" z="0" animated="true" hero-id="pageexpand">
             <h1>{{app.name}}</h1>
-          </div>
+          </paper-shadow>
         </template>
       </paper-shadow>
 
