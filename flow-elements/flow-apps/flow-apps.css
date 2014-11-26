@@ -8,7 +8,7 @@
   background: #ffffff;
 }
 
-.card paper-shadow {
+.card paper-shadow > div {
   overflow: hidden;
   background: #ffffff;
 }

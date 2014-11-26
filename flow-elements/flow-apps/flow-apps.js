@@ -6,9 +6,11 @@ Polymer('flow-apps', {
   },
 
   liftup: function(e, d, s) {
+    s.style.zIndex = 1;
     s.setZ(1);
   },
   liftdown: function(e, d, s) {
+    s.style.zIndex = 0;
     s.setZ(0);
   }
 

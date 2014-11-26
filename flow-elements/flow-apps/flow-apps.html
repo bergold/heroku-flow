@@ -18,7 +18,9 @@
                         z="0" animated
                         hero-id="pageexpand" hero?="{{ a.name == app }}"
                         on-tap="{{onAppTap}}" on-down="{{liftup}}" on-up="{{liftdown}}">
-            <h1>{{ a.name }}</h1>
+            <div>
+              <h1>{{ a.name }}</h1>
+            </div>
           </paper-shadow>
         </template>
       </paper-shadow>
