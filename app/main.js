@@ -27,6 +27,9 @@ define(function(require, exports, module) {
       ];
     }, 2000);
 
+    app.addEventListener('apps-select', function() {
+      app.goto('apps');
+    });
     app.addEventListener('app-select', function(e) {
       app.goto('app', e.detail);
     });

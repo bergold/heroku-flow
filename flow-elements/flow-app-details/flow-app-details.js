@@ -4,7 +4,7 @@ Polymer('flow-app-details', {
 
     this.$.toggleNav.addEventListener('click', this.toggleAppsnav.bind(this));
     this.$.appsnav.addEventListener('core-collapse-open', this.updateToggleButtonIcon.bind(this));
-    this.$.appsnav.addEventListener('core-select', this.selectApp.bind(this));
+    //this.$.appsnav.addEventListener('core-select', this.selectApp.bind(this));
     this.$.navigation.addEventListener('core-select', this.selectPage.bind(this));
     this.$.navdrawer.addEventListener('core-select', this.closeAppsnav.bind(this));
 
@@ -28,9 +28,14 @@ Polymer('flow-app-details', {
     else this.$.toggleNav.icon = 'arrow-drop-down';
   },
 
-  selectApp: function() {
-    // selection in appsnav changed
+  selectApp: function(e, d, s) {
+    this.fire('app-select', s.getAttribute('name'));
     this.$.navdrawer.closeDrawer();
+  },
+
+  selectApps: function() {
+    this.$.navdrawer.closeDrawer();
+    this.async(this.fire, ['apps-select'], 500);
   },
 
   appChanged: function(oldval, newVal) {

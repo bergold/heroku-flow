@@ -25,12 +25,12 @@
           </core-toolbar>
           <core-collapse id="appsnav">
             <core-menu selectedAttribute="">
-              <paper-item name="apps">
+              <paper-item name="apps" on-tap="{{selectApps}}">
                 <core-icon icon="apps"></core-icon>
                 All Apps
               </paper-item>
               <template repeat="{{ a in apps }}">
-                <paper-item name="{{ a.name }}" class="indent">
+                <paper-item name="{{ a.name }}" on-tap="{{selectApp}}" class="indent">
                   {{ a.name }}
                 </paper-item>
               </template>

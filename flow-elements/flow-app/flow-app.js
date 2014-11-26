@@ -6,7 +6,7 @@ Polymer('flow-app', {
 
   goto: function(page, app) {
     this.$.pagehost.selected = page;
-    if (app) this.$.app.app = app;
+    this.$.app.app = app;
   }
 
 });
