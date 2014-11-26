@@ -5,5 +5,10 @@
   max-width: 512px;
   margin: 128px auto;
   border-radius: 2px;
-  background: #fff;
+  background: #ffffff;
+}
+
+.card paper-shadow {
+  overflow: hidden;
+  background: #ffffff;
 }

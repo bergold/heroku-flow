@@ -2,7 +2,7 @@
 <link rel="import" href="../../components/core-toolbar/core-toolbar.html">
 <link rel="import" href="../../components/paper-shadow/paper-shadow.html">
 
-<polymer-element name="flow-apps" attributes="apps">
+<polymer-element name="flow-apps" attributes="apps app">
   <template>
     <link rel="stylesheet" type="text/css" href="flow-apps.css">
 
@@ -13,12 +13,12 @@
       </core-toolbar>
 
       <paper-shadow class="card" z="1">
-        <template repeat="{{ app in apps }}">
-          <paper-shadow data-app="{{ app.name }}"
+        <template repeat="{{ a in apps }}">
+          <paper-shadow data-app="{{ a.name }}"
                         z="0" animated
-                        hero-id="pageexpand"
+                        hero-id="pageexpand" hero?="{{ a.name == app }}"
                         on-tap="{{onAppTap}}" on-down="{{liftup}}" on-up="{{liftdown}}">
-            <h1>{{ app.name }}</h1>
+            <h1>{{ a.name }}</h1>
           </paper-shadow>
         </template>
       </paper-shadow>
