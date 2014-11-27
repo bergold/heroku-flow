@@ -1,27 +1,23 @@
 <link rel="import" href="../../components/core-header-panel/core-header-panel.html">
 <link rel="import" href="../../components/core-toolbar/core-toolbar.html">
 <link rel="import" href="../../components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../../components/paper-item/paper-item.html">
 
 <polymer-element name="flow-apps" attributes="apps app">
   <template>
     <link rel="stylesheet" type="text/css" href="flow-apps.css">
 
-    <core-header-panel mode="cover" fit>
+    <core-header-panel mode="cover" fit hero-p>
 
       <core-toolbar class="tall">
         <div>Apps</div>
       </core-toolbar>
 
-      <paper-shadow class="card" z="1">
+      <paper-shadow class="card" z="1" hero-p>
         <template repeat="{{ a in apps }}">
-          <paper-shadow data-app="{{ a.name }}"
-                        z="0" animated
-                        hero-id="pageexpand" hero?="{{ a.name == app }}"
-                        on-tap="{{onAppTap}}" on-down="{{liftup}}" on-up="{{liftdown}}">
-            <div>
-              <h1>{{ a.name }}</h1>
-            </div>
-          </paper-shadow>
+          <paper-item data-app="{{ a.name }}" hero-id="pageexpand" on-tap="{{onAppTap}}">
+            {{ a.name }}
+          </paper-item>
         </template>
       </paper-shadow>
 

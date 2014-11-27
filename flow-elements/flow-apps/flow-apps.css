@@ -8,7 +8,6 @@
   background: #ffffff;
 }
 
-.card paper-shadow > div {
-  overflow: hidden;
-  background: #ffffff;
+.card paper-item {
+  background-color: #ffffff !important;
 }
